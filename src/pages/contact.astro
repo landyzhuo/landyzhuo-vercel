@@ -1,0 +1,30 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import { contact } from "../data/contact";
+---
+
+<BaseLayout title="Contact">
+  <section class="mx-auto max-w-4xl px-6 py-24">
+    <SectionHeading
+      eyebrow="Reach Out"
+      title="Contact"
+      text="A simple set of buttons for getting in touch."
+    />
+
+    <div class="flex flex-wrap gap-4">
+      <a href={`mailto:${contact.email}`} class="rounded-full bg-cyan-300 px-5 py-3 text-sm font-medium text-slate-950">
+        Email
+      </a>
+      <a href={contact.linkedin} class="rounded-full border border-white/15 px-5 py-3 text-sm text-slate-200">
+        LinkedIn
+      </a>
+      <a href={contact.github} class="rounded-full border border-white/15 px-5 py-3 text-sm text-slate-200">
+        GitHub
+      </a>
+      <a href={contact.resume} class="rounded-full border border-white/15 px-5 py-3 text-sm text-slate-200">
+        Resume
+      </a>
+    </div>
+  </section>
+</BaseLayout>

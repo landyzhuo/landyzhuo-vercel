@@ -1,0 +1,24 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionHeading from "../components/SectionHeading.astro";
+import { contact } from "../data/contact";
+---
+
+<BaseLayout title="CV">
+  <section class="mx-auto max-w-4xl px-6 py-24">
+    <SectionHeading
+      eyebrow="Resume"
+      title="CV"
+      text="A minimal page for your academic and professional resume."
+    />
+
+    <div class="rounded-3xl border border-white/10 bg-white/5 p-8">
+      <p class="text-slate-300">
+        My CV includes education, research interests, technical projects, and interdisciplinary experience.
+      </p>
+      <a href={contact.resume} class="mt-6 inline-block rounded-full bg-cyan-300 px-5 py-3 text-sm font-medium text-slate-950">
+        Open Resume PDF
+      </a>
+    </div>
+  </section>
+</BaseLayout>
